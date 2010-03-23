@@ -30,10 +30,10 @@ Sure. Feel free to fork it and use it as you please. I consider all code here to
           `class` varchar(30) NOT NULL,
           `teacher` varchar(20) NOT NULL,
           PRIMARY KEY  (`id`)
-        )
+        );
         
         
-        CREATE TABLE IF NOT EXISTS `students` (
+        CREATE TABLE `students` (
           `id` int(4) unsigned NOT NULL auto_increment,
           `name` varchar(30) NOT NULL,
           `password` char(40) NOT NULL, /*stored as a sha1 hash*/
@@ -49,7 +49,7 @@ Sure. Feel free to fork it and use it as you please. I consider all code here to
           `4b` int(4) default NULL,
           PRIMARY KEY  (`id`),
           UNIQUE KEY `email` (`email`)
-        )
+        );
 4. Make sure there is a user that can access this database with at least SELECT, INSERT, and UPDATE privileges
    (one for use with the admin scripts will also need DELETE).
 5. Put server, database, user, and password in appropriate places in fnord.php (and at the tops of scripts/conflict-fix.rb, scripts/class\_stats, scripts/find\_classes\_with, and scripts/find\_empty\_classes, if you want to use them).
