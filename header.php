@@ -16,7 +16,7 @@ $side .= "\n</div>";
 	if (!$slog) {
 		$side = " <div id=\"snav\">\n\t<a href=\"/\">Home</a><br />\n\t<a href=\"login.php\">Login</a><br />\n\t<a href=\"r.php\">Register</a><br />\n </div>\n";
 	} else {
-		$side = "<div id=\"squicklogin\">\n  <form method=\"post\" action=\"login.php\">\n\t<label for=\"email\">Email:</label> <input class=\"inputtext\" type=\"text\" name=\"email\" value=\"{$_SESSION['email']}\" id=\"email\" size=\"30\" />\n\t<label for=\"password\">Password:</label> <input type=\"password\" class=\"inputtext\" name=\"password\" id=\"password\" size=\"30\" />\n\t <table><tr>\n\t\t<td><input type=\"submit\" class=\"inputsubmit\" value=\"Login\" /></td>\n\t\t<td>&nbsp;</td>\n\t\t<td><input type=\"button\" class=\"inputsubmit\" value=\"Register\" onclick=\"javascript:document.location='http://olhs.donaldguy.com/r.php';\" /></td>\n\t</tr></table>\n  </form>\n </div>";
+		$side = "<div id=\"squicklogin\">\n  <form method=\"post\" action=\"login.php\">\n\t<label for=\"email\">Email:</label> <input class=\"inputtext\" type=\"text\" name=\"email\" value=\"{$_SESSION['email']}\" id=\"email\" size=\"30\" />\n\t<label for=\"password\">Password:</label> <input type=\"password\" class=\"inputtext\" name=\"password\" id=\"password\" size=\"30\" />\n\t <table><tr>\n\t\t<td><input type=\"submit\" class=\"inputsubmit\" name=\"submit\" value=\"Login\" /></td>\n\t\t<td>&nbsp;</td>\n\t\t<td><input type=\"submit\" name=\"submit\" class=\"inputsubmit\" value=\"Register\" /></td>\n\t</tr></table>\n  </form>\n </div>";
 	}
 }
 

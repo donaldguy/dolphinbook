@@ -6,6 +6,10 @@ $head = "Log-In";
 if(isset($_SESSION['sid'])) { header("Location: /"); }
 if (isset($_POST['email']) && isset($_POST['password'])) {
 
+if (isset($_POST["submit"]) && $_POST["submit"] == "Register") {
+        header("Location: /r.php?email=" . $_POST['email']);
+}
+
 include "fnord.php";
 $result = mysql_query("SELECT `id`, `password`, `verif` FROM `students` WHERE `email` = '".$_POST['email']."'",$db_link);
 

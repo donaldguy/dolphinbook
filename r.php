@@ -76,7 +76,7 @@ From there you\'ll be able to enter your schedule and see who\'s in it! Have Fun
 	<table class=\"formtable\">
 	<tr><td class=\"label\">First Name:</td><td><input name=\"fname\" size=\"30\" type=\"text\" class=\"inputtext\" value=\"{$_POST['fname']}\" /></td></tr>
 	<tr><td class=\"label\">Last Name:</td><td><input name=\"lname\" size=\"30\" type=\"text\" class=\"inputtext\" value=\"{$_POST['lname']}\" /></td></tr>
-	<tr><td class=\"label\">E-mail</td><td><input name=\"email\" size=\"30\" type=\"text\" class=\"inputtext\" value=\"{$_POST['email']}\" /></td></tr>
+	<tr><td class=\"label\">E-mail</td><td><input name=\"email\" size=\"30\" type=\"text\" class=\"inputtext\" value=\"{$_REQUEST['email']}\" /></td></tr>
 <tr><td class=\"label\">Password</td><td><input name=\"password\" size=\"30\" type=\"password\" class=\"inputpassword\" /></td></tr>
 <tr><td class=\"label\">Confirm Password</td><td><input name=\"confirm_password\" size=\"30\" type=\"password\" class=\"inputpassword\" /></td></tr>
 </table>
