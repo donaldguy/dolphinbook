@@ -1,0 +1,38 @@
+#!/usr/bin/ruby
+
+require 'mysql'
+
+blocks = %w{ 1a 2a 3a 4a 1b 2b 3b 4b }
+$classes = {}
+
+
+$m = Mysql.new( 'mysql.donaldguy.com', :user , :password , 'olsched')
+
+
+#get a hash of arrays of classes, indexed by block
+blocks.each do |block|
+  $classes[block] = []
+  $m.query "SELECT `id` FROM `classes` WHERE `block` = '#{block}'" do |res|
+    res.each do |row|  
+      $classes[block] << row[0]
+    end
+  end
+end
+
+#see if these classes have studdents .. add the empty ones to an array
+$empties = []
+
+$classes.each_pair do |block, ids|
+  $empties << ids.select do |id|
+    students = []
+    $m.query("SELECT `id` FROM `students` WHERE `#{block}` = '#{id}'").each do |student|
+      students << student
+    end
+    students.length == Integer(ARGV[0])
+  end
+end
+
+puts  $empties
+
+  
+  

@@ -1,0 +1,116 @@
+/*
+   OLHS Schedule System aka dolphinbook
+   
+   
+*/
+
+/* the basics*/
+body {
+	padding: 8px 0px 0px;
+         margin: 0px auto;
+	 width: 760px;
+	 text-align: left;
+}
+
+a {
+        color: #3B5998;
+        text-decoration: none;
+}
+
+img {
+        border: 0px;
+}
+
+form {
+        margin: 0px;
+        padding: 0px;
+}
+
+label {
+        font-weight: bold;
+        color: gray;
+}
+
+/*specifics*/
+
+/*--------------------------HEADERS--------------------*/
+
+div#head {
+	position: relative;
+	width: 760px;
+	height: 33px;
+	background-image: url(imgs/header.png);
+	background-repeat: no-repeat;
+}
+
+.header {
+        font-weight: bold;
+        line-height: 23px;
+        padding: 0px 10px 0px;
+        margin: 0px;
+        background: #6d84b4;
+        color: white;
+        border-bottom: solid 1px #3B5998;
+}
+
+#topnav   {
+        text-align: right;
+        position: absolute;
+        line-height: 25px;
+        list-style: none;
+        top: 1px;
+        left: 250px;
+        width: 500px;
+        margin: 0px;
+        padding: 3px 0px;
+}
+        
+   #topnav li { display: inline; }
+   #topnav a { margin: auto 0px; padding: 2px 4px; color: #D8DFEA; }
+   #topnav a:hover { color: white; background-color: #526DA4; }
+
+
+/*--------------------------SIDE BAR--------------------*/
+div#sidebar {
+    margin-top: 8px;
+    position: relative;
+    width: 120px;
+    height: auto;
+    float: left;
+}
+
+#navbar {
+        border-bottom: solid 1px white; /* firefox fix */
+        margin: 10px 0px;
+        padding: 0px; 
+}
+        
+#navbar a {
+          border-bottom: solid 1px #D8DFEA;
+          padding: 2px 3px;
+          margin: 0px;
+          width: 114px;
+          display: block;
+          float: left; 
+}
+
+#navbar a:hover { text-decoration: none; color: white; background: #3B5998; }
+
+
+/*------------------BODY----------------------*/
+
+#pbody {
+    float: left;
+    text-align: left;
+    width: 628px;
+    margin-left: 12px;
+}
+
+
+
+#content {
+        padding: 12px 0px;
+        border-bottom: solid 1px #3B5998;
+        border-left: solid 1px #D8DFEA;
+        border-right: solid 1px #D8DFEA;
+}

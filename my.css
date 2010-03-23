@@ -1,0 +1,26 @@
+.cs:before {
+content: "Coming Soon! ";
+color: #FF0000;
+}
+
+.infotable a:hover {
+color: #D8DFEA;
+}
+
+.suggest {
+visibility: hidden;
+position:absolute;
+background-color:#FFFFFF;
+text-align:left;
+border:1px solid #000000;
+}
+
+.suggest_link {
+background-color: #FFFFFF;
+padding: 2px 6px  2px 6px;
+}
+
+.suggest_link:hover {
+background-color: #000000;
+color: #FFFFFF;
+}

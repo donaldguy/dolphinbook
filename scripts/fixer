@@ -1,0 +1,52 @@
+#!/usr/bin/ruby
+
+require 'conflict_fix'
+
+blocks = %w{ 1a 2a 3a 4a 1b 2b 3b 4b }
+
+print "What block are we starting with? "
+temp = gets.chomp
+
+blocks.index(temp).times { blocks.shift } #remove the ones we aren't touching
+
+blocks.each do |block|
+  
+  num = 1
+  
+  cons = BlockConflictFinder.new(block).conflicts
+
+  cons.each do |con|
+    loop do
+      printf "%80s", "#{num} of #{cons.length} (for #{block})\n"
+      puts con
+      print "> "
+      case gets.chomp
+        when /^\?$/
+	  puts ""+
+	    "\tf <number>\n"+
+	    "\t<number>   fix conflict by merging to <number>\n"+
+	    "\tr <number> remove <number> from the conflict list\n"+
+	    "\td <number> fix conflict, reinitialize, and prompt again\n"+
+	    "\ts          skip it\n"+
+	    "\t?          print this help message\n"
+	when /^(?:f )?(\d+)$/, /^(\d+)$/
+	  con.fix($1)
+	  puts "Fixed:\n#{con}"
+	  break;
+	when /^r (\d+)$/
+	  con.remove($1)
+	when /^s$/
+	  break;
+	when /^d (\d+)$/
+	  con.fix($1)
+	  puts "Incrementally Fixed:\n"
+	else
+	    puts "Invalid Entry, try ? for help"
+      end
+    end
+    num += 1
+  end
+  print "Done with block.. continue? "
+  temp = gets.chomp
+  break if temp =~ /n/
+end

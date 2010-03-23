@@ -1,0 +1,2 @@
+#!/bin/bash
+xargs perl -e "print \"'\".join('\\' , \\'', @ARGV).\"'\\n\""

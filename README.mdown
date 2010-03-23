@@ -1,0 +1,20 @@
+#Dolphinbook "the OL Schedule DB v 2.0"
+
+##What is this?
+*TL;DR* a database to show high school students who are in their classes based on self-reporting before school starts. And some tools to maintain it
+
+Dolphinbook was a personal project I undertook in Summer 2006 to recreate a schedule matching database to be used in the few weeks between when class schedules were mailed out for my highschool and when classes began. More properly, it was a rewrite of something I had done on some free host in Summer 2005 with the same aim and then lost the code to. Despite being a highly niche-product, it was relatively popular and garnered about 700 users summer 2006, 600 users summer 2007, and to my great confusion, about 700 users summer 2008 despite my lack of publicizing it and the large posted notice saying I refused to ensure its integrity due to my graduation (and looking for a new maintainer who never appeared). (for scale, there were about 2400 students in the school in the 2008-2009 school year, slightly less before 2007.)
+
+The essential concept was that of a self-building database. The first user would have no data and would enter their classes completely. Later users would have suggestion/auto-completion of fields based on the input of earlier users. This sought to homogenize the exact strings entered by users so that they would get the most results. This built a table from which lists of who was in what class would be rendered and presented to users (who claimed to be) in that class.
+
+Other features were planned but never implemented. Sadly, in summers 2006, 2007 (and 2005 on the earlier revision) I spent the majority of the two or so weeks the site was active correcting for human error (e.g. typos in teacher's names) and mismatches in the course titles entered (e.g. Spanish II vs Spanish 2). In turns out that keying on user-entered strings (or rather, creating unique numerical keys corresponding to user strings) did not lead to the most accurate of data. To assist in correcting for these errors, I built a suite of scripts/tools to locate and correct these errors. (They are in the scripts directory)
+
+##Why is it here?
+
+Because I realized that I have no code open sourced and online; I realized this is a shame and that I should start sooner rather than later. It is to maintain a historical archive of what type of code I wrote 4 years ago. Finally, though simple and very small targeted, it was a tool that a relatively large number of people found useful at one time, so there is a small chance someone will fork it and want to us it again.
+
+##Can I use it then?
+
+Sure. Feel free to fork it and use it as you please. I consider all code here to be under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php). Note that it is based on a A/B block scheduling (sets of 4 classes alternated every other day), so it will need some modification (though not substantial) for semantics of other types of scheduling.
+
+I will add a primer on deploying it when I get the chance. In the mean time, just note that mysql user and password have been redacted (replaced with comments / ruby symbols). Fix this by either following the errors or looking where you'd generally expect a db connect to happen.
