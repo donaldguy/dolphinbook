@@ -23,32 +23,33 @@ Sure. Feel free to fork it and use it as you please. I consider all code here to
 1. Obtain hosting that supports PHP. There aren't any non-standard modules involved. So there should be no real challenge there.
 2. Copy the source directory there. `git clone` it, use the download source link above, whatever you wnat.
 3. Make the database. I used MySQL, but there is no reason it shouldn't work with Postgres, MS SQL, etc. It's a pretty simple schema, just two tables. Here's the SQL you need basically.
-    CREATE TABLE `classes` (
-      `id` int(4) NOT NULL auto_increment,
-      `block` enum('1a','2a','3a','4a','1b','2b','3b','4b') NOT NULL,
-      `class` varchar(30) NOT NULL,
-      `teacher` varchar(20) NOT NULL,
-      PRIMARY KEY  (`id`)
-    )
-    
-    
-    CREATE TABLE IF NOT EXISTS `students` (
-      `id` int(4) unsigned NOT NULL auto_increment,
-      `name` varchar(30) NOT NULL,
-      `password` char(40) NOT NULL, /*stored as a sha1 hash of what is entered at registration*/
-      `email` varchar(50) NOT NULL,
-      `verif` tinyint(1) NOT NULL,
-      `1a` int(4) default NULL,
-      `2a` int(4) default NULL,
-      `3a` int(4) default NULL,
-      `4a` int(4) default NULL,
-      `1b` int(4) default NULL,
-      `2b` int(4) default NULL,
-      `3b` int(4) default NULL,
-      `4b` int(4) default NULL,
-      PRIMARY KEY  (`id`),
-      UNIQUE KEY `email` (`email`)
-    )
+        
+        CREATE TABLE `classes` (
+          `id` int(4) NOT NULL auto_increment,
+          `block` enum('1a','2a','3a','4a','1b','2b','3b','4b') NOT NULL,
+          `class` varchar(30) NOT NULL,
+          `teacher` varchar(20) NOT NULL,
+          PRIMARY KEY  (`id`)
+        )
+        
+        
+        CREATE TABLE IF NOT EXISTS `students` (
+          `id` int(4) unsigned NOT NULL auto_increment,
+          `name` varchar(30) NOT NULL,
+          `password` char(40) NOT NULL, /*stored as a sha1 hash*/
+          `email` varchar(50) NOT NULL,
+          `verif` tinyint(1) NOT NULL,
+          `1a` int(4) default NULL,
+          `2a` int(4) default NULL,
+          `3a` int(4) default NULL,
+          `4a` int(4) default NULL,
+          `1b` int(4) default NULL,
+          `2b` int(4) default NULL,
+          `3b` int(4) default NULL,
+          `4b` int(4) default NULL,
+          PRIMARY KEY  (`id`),
+          UNIQUE KEY `email` (`email`)
+        )
 4. Make sure there is a user that can access this database with at least SELECT, INSERT, and UPDATE privileges
    (one for use with the admin scripts will also need DELETE).
 5. Put server, database, user, and password in appropriate places in fnord.php (and at the tops of scripts/conflict-fix.rb, scripts/class\_stats, scripts/find\_classes\_with, and scripts/find\_empty\_classes, if you want to use them).
