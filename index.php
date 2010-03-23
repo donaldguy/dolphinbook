@@ -7,13 +7,21 @@ include "header.php";
 <!--
 <div style="margin: 10px 20px;">
 <div class="status">
-<p>Yes, you do have to register.. even if you did last year</p>
-<p>Also, people are making many, many mistakes. They are easier to find and fix
-if they are corrected. Look at the notes on the <a href="editsched.php"> Edit Schedule page</a> and act accordingly. Further, if you know some SQL and want to help, <a href="mailto:admin@olhs.donaldguy.com"> email me</a></p>
-
-<p><b>Attention: </b>I am tired of dealing with bounced emails and cluttered databases, if you haven't done e-mail verification as of 1:25PM on Wednesday, your account has been deleted. You are free to reregister. If you gave a valid email, and never recieved a verifcation email (because of spam filters or whatever), lt me know; I can activate your account manually</p>
-
-
+<p>Hello. As many of you may be aware, I, Donald Guy, graduated from Ocean Lakes in 2008. As a result, I am busy at <a href="http://web.mit.edu">MIT</a> and no longer run Dolphinbook.</p> 
+<p>
+        This site is here as a demo for historical purposes only. If you would like to reincarnate it at Ocean
+        Lakes or any other high school in the world, the source (and some management tools) are now available on
+        <a href="http://github.com/donaldguy/dolphinbook">GitHub</a>.
+</p>
+<p> 
+        If you have any questions, feel free to contact me (ways to do that shouldn't be hard to come by). (For OLHS, 
+        I might be willing to provide hosting too.)
+</p>
+<p>        
+        The database is being reset to a clean version as of Tuesday March 23, 2010. Feel free to register,
+        play with the interface and enter data. Just don't expect it to represent anything. Thanks.
+</p>
+</div>
 </div>
 -->
 <p>What is this you ask?</p>

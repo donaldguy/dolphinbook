@@ -7,7 +7,6 @@
 <div id="pagefooter">
 <ul id="fnav">
 <li><a href="mailto:admin@olhs.donaldguy.com">mail donald</a></li>
-<li><a href="mailto:mike@olhs.donaldguy.com">mail mike</a></li>
 <li><a>what else</a></li>
 <li><a>should I</a></li>
 <li><a>put here?</a></li>
@@ -15,7 +14,7 @@
 
 <p>a Donald Guy production</p>
 <p>Original CSS &copy; 2006 Facebook (DONT SUE ME!)</p>
-<p>HTML, PHP, Additional CSS &copy; 2006-2007 Donald Guy</p>
+<p>HTML, PHP, Additional CSS &copy; 2006-2010 Donald Guy</p>
 </div>
 
 </div> <!-- book -->
