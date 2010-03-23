@@ -8,10 +8,6 @@ if (isset($_SESSION['sid'])) {
 
 	$side = " <div id=\"snav\">\n\t<a href=\"/\">Home</a><br />\n\t<a href=\"mysched.php\" class=\"hasedit\">My Schedule</a><a class=\"edit\" href=\"editsched.php\">Edit</a><br />";
 
-if ($_SESSION['sid'] == 1) {
-	$side .= "\n\t<a href=\"admin.php\">Admin Tasks</a><br />";
-}
-
 $side .= "\n</div>";
 
 
